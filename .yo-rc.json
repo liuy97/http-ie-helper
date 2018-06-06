@@ -1,0 +1,39 @@
+{
+  "generator-ngx-library": {
+    "version": "6.1.0",
+    "authorName": "Yong Liu",
+    "authorEmail": "liuy97@gmail.com",
+    "githubUsername": "liuy97",
+    "githubRepoName": "http-ie-helper",
+    "projectName": "http-ie-helper",
+    "projectVersion": "0.0.1",
+    "projectDescription": "Angular library built with ❤ using ngx-library yeoman generator.",
+    "projectKeywords": [
+      "ie",
+      "http",
+      "angular",
+      "library"
+    ],
+    "ngVersion": "4.0.0",
+    "ngModules": [
+      "core",
+      "common"
+    ],
+    "otherDependencies": [],
+    "additionalPackageFiles": [],
+    "dependenciesRange": "^",
+    "ngPrefix": "my-lib",
+    "testingFramework": "karma",
+    "useGreenkeeper": false,
+    "useCompodoc": false,
+    "enforceNgGitCommitMsg": true,
+    "exclusions": [
+      "demo/proxy.conf.json",
+      "demo/src/jestGlobalMocks.ts",
+      "demo/src/setupJest.ts",
+      "config/jestGlobalMocks.ts",
+      "config/setupJest.ts"
+    ],
+    "deleteExclusions": []
+  }
+}
