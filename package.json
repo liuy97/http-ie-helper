@@ -1,7 +1,7 @@
 {
   "name": "http-ie-helper",
   "description": "Get request will be sent with no-cache in IE 11.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/liuy97/http-ie-helper",
   "author": {
     "name": "Yong Liu",
