@@ -1,7 +1,3 @@
-<p align="center">
-  <img height="256px" width="256px" style="text-align: center;" src="https://cdn.rawgit.com/liuy97/http-ie-helper/master/demo/src/assets/logo.svg">
-</p>
-
 # http-ie-helper - Get request will be sent with no-cache in IE 11.
 
 [![npm version](https://badge.fury.io/js/http-ie-helper.svg)](https://badge.fury.io/js/http-ie-helper),
@@ -41,27 +37,29 @@ Once installed you need to import the main module:
 import { HttpIEHelperModule } from 'http-ie-helper';
 ```
 The only remaining part is to list the imported module in your application module. The exact method will be slightly
-different for the root (top-level) module for which you should end up with the code similar to (notice ` LibModule .forRoot()`):
+different for the root (top-level) module for which you should end up with the code similar to (notice ` HttpIEHelperModule .forRoot()`):
 ```js
-import { HttpIEHelperModule } from 'http-ie-helper';
+import { HttpIEHelperModule, HttpIEHelperInterceptor } from 'http-ie-helper';
 
 @NgModule({
   declarations: [AppComponent, ...],
-  imports: [LibModule.forRoot(), ...],  
+  imports: [HttpIEHelperModule.forRoot(), ...],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: HttpIEHelperInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
 ```
 
-Other modules in your application can simply import ` HttpIEHelperModule `:
+Other modules in your application can simply import ` HttpIEHelperModule ` and provide HttpIEHelperInterceptor:
 
 ```js
-import { HttpIEHelperModule } from 'http-ie-helper';
+import { HttpIEHelperModule, HttpIEHelperInterceptor } from 'http-ie-helper';
 
 @NgModule({
   declarations: [OtherComponent, ...],
-  imports: [HttpIEHelperModule, ...], 
+  imports: [HttpIEHelperModule, ...],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: HttpIEHelperInterceptor, multi: true }],
 })
 export class OtherModule {
 }
