@@ -2,10 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
-import { HttpIEHelperInterceptor } from './service/lib.service';
-
-// Export module's public API
-export { HttpIEHelperInterceptor } from './service/lib.service';
+import { HttpIEHelperInterceptor } from './ie-helper.service';
 
 @NgModule({
   imports: [

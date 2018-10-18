@@ -1,0 +1,29 @@
+{
+  "name": "http-ie-helper",
+  "version": "0.1.0",
+  "homepage": "https://github.com/liuy97/http-ie-helper",
+  "author": {
+    "name": "Yong Liu",
+    "url": "https://github.com/liuy97"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/liuy97/http-ie-helper.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ie",
+    "ie11",
+    "cache",
+    "http",
+    "angular",
+    "library"
+  ],
+  "bugs": {
+    "url": "https://github.com/liuy97/http-ie-helper/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=4.3.0",
+    "@angular/core": ">=4.3.0"
+  }
+}
